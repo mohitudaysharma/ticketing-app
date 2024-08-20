@@ -103,9 +103,9 @@ public class Movie {
 		this.description = description;
 	}
 
-	public Boolean getDeletion() {
-		return is_deleted;
-	}
+ public Boolean isDeleted() {
+ 		return isDeleted;
+ 	}
 
 	public void setDescription(Boolean deletion) {
 		this.is_deleted = deletion;
