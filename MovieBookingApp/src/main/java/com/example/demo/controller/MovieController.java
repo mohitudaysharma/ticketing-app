@@ -84,11 +84,6 @@ public class MovieController {
 		return new ResponseEntity<Map<String,String>>(CommonUtils.messageJson("Something went wrong with the request!"), HttpStatus.BAD_REQUEST);
 	}
 	
-	@PutMapping("/edit/{code}")
-	public ResponseEntity<?> editMovie(@PathVariable String code, @Valid @RequestBody MovieRequest movie) {
-	return new ResponseEntity<MovieResponse>(movieService.editMovie(code, movie), HttpStatus.CREATED);
-	}
-	
 	@DeleteMapping("/remove/{code}")
 	public ResponseEntity<?> deleteMovie(@PathVariable String code) {
 		String filename = movieService.deleteMovie(code);
