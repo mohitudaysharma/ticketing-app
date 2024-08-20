@@ -25,7 +25,8 @@ public class Movie {
 	private String movieName;
 	private String poster;
 	private String description;
-	private Boolean is_deleted = Boolean.FALSE;
+ @Column(name = "is_deleted", nullable = false)
+ 	private Boolean isDeleted = Boolean.FALSE;
 	
     @Column(name = "created_at", nullable = false, updatable = false)
     @CreationTimestamp
