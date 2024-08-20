@@ -107,9 +107,9 @@ public class Movie {
  		return isDeleted;
  	}
 
-	public void setDescription(Boolean deletion) {
-		this.is_deleted = deletion;
-	}
+ public void setDeletion(Boolean deletion) {
+ 		this.is_deleted = deletion;
+ 	}
 
 	@Override
 	public String toString() {
