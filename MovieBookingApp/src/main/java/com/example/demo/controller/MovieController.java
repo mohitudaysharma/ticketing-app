@@ -39,7 +39,11 @@ public class MovieController {
 	
 	@Autowired
 	private MovieService movieService;
-	
+
+	@GetMapping("/health")
+	public ResponseEntity<String> getAllMovies() {
+		return new ResponseEntity<>("Web App Running", HttpStatus.OK);
+	}
 	/**
 	 * Get all movies, to add filters later(via path variables)
 	 * @return list of movies, ideally
