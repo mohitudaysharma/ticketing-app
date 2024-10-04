@@ -25,6 +25,8 @@ public class Movie {
 	private String movieName;
 	private String poster;
 	private String description;
+ @Column(name = "is_deleted", nullable = false)
+ 	private Boolean isDeleted = Boolean.FALSE;
 	
     @Column(name = "created_at", nullable = false, updatable = false)
     @CreationTimestamp
@@ -100,6 +102,14 @@ public class Movie {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
+ public Boolean isDeleted() {
+ 		return isDeleted;
+ 	}
+
+ public void setDeletion(Boolean deletion) {
+ 		this.is_deleted = deletion;
+ 	}
 
 	@Override
 	public String toString() {
